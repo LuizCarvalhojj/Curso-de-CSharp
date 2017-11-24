@@ -50,24 +50,29 @@
             // 
             // TXT_Usuario
             // 
-            this.TXT_Usuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TXT_Usuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TXT_Usuario.ForeColor = System.Drawing.Color.Silver;
             this.TXT_Usuario.Location = new System.Drawing.Point(77, 260);
             this.TXT_Usuario.Multiline = true;
             this.TXT_Usuario.Name = "TXT_Usuario";
             this.TXT_Usuario.Size = new System.Drawing.Size(245, 27);
             this.TXT_Usuario.TabIndex = 1;
-            this.TXT_Usuario.Text = "Usúario";
+            this.TXT_Usuario.Text = "Usuário";
+            this.TXT_Usuario.Enter += new System.EventHandler(this.TXT_Usuario_Enter);
+            this.TXT_Usuario.Leave += new System.EventHandler(this.TXT_Usuario_Leave);
             // 
             // TXT_Senha
             // 
-            this.TXT_Senha.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TXT_Senha.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TXT_Senha.ForeColor = System.Drawing.Color.Silver;
             this.TXT_Senha.Location = new System.Drawing.Point(77, 293);
             this.TXT_Senha.Multiline = true;
             this.TXT_Senha.Name = "TXT_Senha";
-            this.TXT_Senha.PasswordChar = '*';
             this.TXT_Senha.Size = new System.Drawing.Size(245, 27);
             this.TXT_Senha.TabIndex = 2;
             this.TXT_Senha.Text = "Senha";
+            this.TXT_Senha.Enter += new System.EventHandler(this.TXT_Senha_Enter);
+            this.TXT_Senha.Leave += new System.EventHandler(this.TXT_Senha_Leave);
             // 
             // BTN_Entrar
             // 
@@ -116,9 +121,9 @@
 
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.TextBox TXT_Usuario;
-        private System.Windows.Forms.TextBox TXT_Senha;
         private System.Windows.Forms.Button BTN_Entrar;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.TextBox TXT_Senha;
     }
 }
 

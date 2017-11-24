@@ -30,5 +30,49 @@ namespace ProtótipoPortaria
             frmMenu.Show();
             
         }
+
+        private void TXT_Usuario_Enter(object sender, EventArgs e)
+        {
+            if (TXT_Usuario.Text == "Usuário")
+            {
+                TXT_Usuario.Text = "";
+                TXT_Usuario.ForeColor = Color.Black;
+
+            }
+        }
+
+        private void TXT_Usuario_Leave(object sender, EventArgs e)
+        {
+            if (TXT_Usuario.Text == "")
+            {
+                TXT_Usuario.Text = "Usuário";
+                TXT_Usuario.ForeColor = Color.Silver;
+
+            }
+
+        }
+
+        private void TXT_Senha_Enter(object sender, EventArgs e)
+        {
+            if (TXT_Senha.Text == "Senha")
+            {
+                TXT_Senha.Text = "";
+                TXT_Senha.ForeColor = Color.Black;
+
+            }
+
+        }
+
+        private void TXT_Senha_Leave(object sender, EventArgs e)
+        {
+
+            if (TXT_Senha.Text == "")
+            {
+                TXT_Senha.Text = "Senha";
+                TXT_Senha.ForeColor = Color.Silver;
+
+            }
+
+        }
     }
 }
