@@ -50,7 +50,7 @@
             // 
             // TXT_Usuario
             // 
-            this.TXT_Usuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TXT_Usuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TXT_Usuario.ForeColor = System.Drawing.Color.Silver;
             this.TXT_Usuario.Location = new System.Drawing.Point(77, 260);
             this.TXT_Usuario.Multiline = true;
@@ -63,7 +63,7 @@
             // 
             // TXT_Senha
             // 
-            this.TXT_Senha.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TXT_Senha.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TXT_Senha.ForeColor = System.Drawing.Color.Silver;
             this.TXT_Senha.Location = new System.Drawing.Point(77, 293);
             this.TXT_Senha.Multiline = true;
@@ -71,6 +71,7 @@
             this.TXT_Senha.Size = new System.Drawing.Size(245, 27);
             this.TXT_Senha.TabIndex = 2;
             this.TXT_Senha.Text = "Senha";
+            this.TXT_Senha.TextChanged += new System.EventHandler(this.TXT_Senha_TextChanged);
             this.TXT_Senha.Enter += new System.EventHandler(this.TXT_Senha_Enter);
             this.TXT_Senha.Leave += new System.EventHandler(this.TXT_Senha_Leave);
             // 

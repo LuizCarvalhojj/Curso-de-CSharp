@@ -28,7 +28,7 @@ namespace ProtótipoPortaria
 
             frmMenu frmMenu = new frmMenu();
             frmMenu.Show();
-            
+
         }
 
         private void TXT_Usuario_Enter(object sender, EventArgs e)
@@ -65,14 +65,21 @@ namespace ProtótipoPortaria
 
         private void TXT_Senha_Leave(object sender, EventArgs e)
         {
+            if (String.IsNullOrEmpty(TXT_Senha.Text))
+                TXT_Senha.PasswordChar = '\0';
 
             if (TXT_Senha.Text == "")
             {
                 TXT_Senha.Text = "Senha";
                 TXT_Senha.ForeColor = Color.Silver;
-
             }
 
+        }
+
+        private void TXT_Senha_TextChanged(object sender, EventArgs e)
+        {
+            if (TXT_Senha.Text != "Senha")
+                TXT_Senha.PasswordChar = '*';
         }
     }
 }
