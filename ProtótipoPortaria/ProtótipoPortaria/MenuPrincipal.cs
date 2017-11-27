@@ -17,8 +17,16 @@ namespace ProtótipoPortaria
             InitializeComponent();
         }
 
-  
+        private void sairToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
 
-  
+        private void sairToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmLogin frmlog = new frmLogin();
+            frmlog.Show();
+            this.Close();
+        }
     }
 }

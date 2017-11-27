@@ -33,9 +33,9 @@
             this.TXT_Usuario = new System.Windows.Forms.TextBox();
             this.TXT_Senha = new System.Windows.Forms.TextBox();
             this.BTN_Entrar = new System.Windows.Forms.Button();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.BTN_Sairlogin = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -44,7 +44,7 @@
             this.pictureBox1.Location = new System.Drawing.Point(97, 12);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(208, 191);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
@@ -77,9 +77,9 @@
             // 
             // BTN_Entrar
             // 
-            this.BTN_Entrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BTN_Entrar.ForeColor = System.Drawing.Color.SteelBlue;
-            this.BTN_Entrar.Location = new System.Drawing.Point(171, 346);
+            this.BTN_Entrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BTN_Entrar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.BTN_Entrar.Location = new System.Drawing.Point(77, 340);
             this.BTN_Entrar.Name = "BTN_Entrar";
             this.BTN_Entrar.Size = new System.Drawing.Size(106, 31);
             this.BTN_Entrar.TabIndex = 3;
@@ -87,32 +87,46 @@
             this.BTN_Entrar.UseVisualStyleBackColor = true;
             this.BTN_Entrar.Click += new System.EventHandler(this.BTN_Entrar_Click);
             // 
-            // pictureBox2
+            // BTN_Sairlogin
             // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(101, 335);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(64, 51);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 4;
-            this.pictureBox2.TabStop = false;
+            this.BTN_Sairlogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BTN_Sairlogin.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.BTN_Sairlogin.Location = new System.Drawing.Point(216, 340);
+            this.BTN_Sairlogin.Name = "BTN_Sairlogin";
+            this.BTN_Sairlogin.Size = new System.Drawing.Size(106, 31);
+            this.BTN_Sairlogin.TabIndex = 4;
+            this.BTN_Sairlogin.Text = "Sair";
+            this.BTN_Sairlogin.UseVisualStyleBackColor = true;
+            this.BTN_Sairlogin.Click += new System.EventHandler(this.BTN_Sairlogin_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(140, 223);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(144, 25);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "Portaria - Login";
             // 
             // frmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(392, 428);
-            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.BTN_Sairlogin);
             this.Controls.Add(this.BTN_Entrar);
             this.Controls.Add(this.TXT_Senha);
             this.Controls.Add(this.TXT_Usuario);
             this.Controls.Add(this.pictureBox1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.KeyPreview = true;
             this.Name = "frmLogin";
-            this.Text = "Login";
+            this.Text = "Condomínio Transparente :: Login";
             this.Load += new System.EventHandler(this.Form1_Load);
+            this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.frmLogin_KeyUp);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -123,8 +137,9 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.TextBox TXT_Usuario;
         private System.Windows.Forms.Button BTN_Entrar;
-        private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.TextBox TXT_Senha;
+        private System.Windows.Forms.Button BTN_Sairlogin;
+        private System.Windows.Forms.Label label1;
     }
 }
 

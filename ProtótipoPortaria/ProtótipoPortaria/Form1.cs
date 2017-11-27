@@ -81,5 +81,18 @@ namespace ProtótipoPortaria
             if (TXT_Senha.Text != "Senha")
                 TXT_Senha.PasswordChar = '*';
         }
+
+        private void BTN_Sairlogin_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void frmLogin_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                BTN_Entrar_Click(sender, e);
+            }
+        }
     }
 }
