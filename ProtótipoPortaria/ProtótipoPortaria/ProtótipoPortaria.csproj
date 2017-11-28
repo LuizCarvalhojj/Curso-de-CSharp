@@ -31,6 +31,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>icone.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -45,11 +48,53 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CadastroCondômino.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CadastroCondômino.Designer.cs">
+      <DependentUpon>CadastroCondômino.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCadastroVeículos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCadastroVeículos.Designer.cs">
+      <DependentUpon>frmCadastroVeículos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCadastroVisitantes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCadastroVisitantes.Designer.cs">
+      <DependentUpon>frmCadastroVisitantes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmConsultarArea.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmConsultarArea.Designer.cs">
+      <DependentUpon>frmConsultarArea.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPrestadoresAutorizados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPrestadoresAutorizados.Designer.cs">
+      <DependentUpon>frmPrestadoresAutorizados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmReservararea.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReservararea.Designer.cs">
+      <DependentUpon>frmReservararea.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmVisitantesAutori.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmVisitantesAutori.Designer.cs">
+      <DependentUpon>frmVisitantesAutori.cs</DependentUpon>
     </Compile>
     <Compile Include="MenuPrincipal.cs">
       <SubType>Form</SubType>
@@ -59,8 +104,29 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="CadastroCondômino.resx">
+      <DependentUpon>CadastroCondômino.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCadastroVeículos.resx">
+      <DependentUpon>frmCadastroVeículos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCadastroVisitantes.resx">
+      <DependentUpon>frmCadastroVisitantes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmConsultarArea.resx">
+      <DependentUpon>frmConsultarArea.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPrestadoresAutorizados.resx">
+      <DependentUpon>frmPrestadoresAutorizados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmReservararea.resx">
+      <DependentUpon>frmReservararea.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmVisitantesAutori.resx">
+      <DependentUpon>frmVisitantesAutori.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MenuPrincipal.resx">
       <DependentUpon>MenuPrincipal.cs</DependentUpon>
@@ -86,6 +152,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="icone.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

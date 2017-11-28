@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMenu));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.cadastrosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cadastroDeCondomimoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -54,8 +55,9 @@
             this.relatórioDeEncomendasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.relatórioDeÁreasComunsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sairToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.sairToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.cadastroDeVisitasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -74,7 +76,7 @@
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.menuStrip1.Size = new System.Drawing.Size(816, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(841, 28);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -83,7 +85,8 @@
             this.cadastrosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.cadastroDeCondomimoToolStripMenuItem,
             this.cadastroDeVisitantesToolStripMenuItem,
-            this.veículosToolStripMenuItem});
+            this.veículosToolStripMenuItem,
+            this.cadastroDeVisitasToolStripMenuItem});
             this.cadastrosToolStripMenuItem.Name = "cadastrosToolStripMenuItem";
             this.cadastrosToolStripMenuItem.Size = new System.Drawing.Size(86, 24);
             this.cadastrosToolStripMenuItem.Text = "Cadastros";
@@ -93,18 +96,21 @@
             this.cadastroDeCondomimoToolStripMenuItem.Name = "cadastroDeCondomimoToolStripMenuItem";
             this.cadastroDeCondomimoToolStripMenuItem.Size = new System.Drawing.Size(257, 26);
             this.cadastroDeCondomimoToolStripMenuItem.Text = "Cadastro de Condômimos";
+            this.cadastroDeCondomimoToolStripMenuItem.Click += new System.EventHandler(this.cadastroDeCondomimoToolStripMenuItem_Click);
             // 
             // cadastroDeVisitantesToolStripMenuItem
             // 
             this.cadastroDeVisitantesToolStripMenuItem.Name = "cadastroDeVisitantesToolStripMenuItem";
             this.cadastroDeVisitantesToolStripMenuItem.Size = new System.Drawing.Size(257, 26);
             this.cadastroDeVisitantesToolStripMenuItem.Text = "Cadastro de Visitantes";
+            this.cadastroDeVisitantesToolStripMenuItem.Click += new System.EventHandler(this.cadastroDeVisitantesToolStripMenuItem_Click);
             // 
             // veículosToolStripMenuItem
             // 
             this.veículosToolStripMenuItem.Name = "veículosToolStripMenuItem";
             this.veículosToolStripMenuItem.Size = new System.Drawing.Size(257, 26);
             this.veículosToolStripMenuItem.Text = "Cadastro de Veículos";
+            this.veículosToolStripMenuItem.Click += new System.EventHandler(this.veículosToolStripMenuItem_Click);
             // 
             // reservasToolStripMenuItem
             // 
@@ -120,12 +126,14 @@
             this.reservaDeÁreaComumToolStripMenuItem.Name = "reservaDeÁreaComumToolStripMenuItem";
             this.reservaDeÁreaComumToolStripMenuItem.Size = new System.Drawing.Size(254, 26);
             this.reservaDeÁreaComumToolStripMenuItem.Text = "Reserva de Áreas Comuns";
+            this.reservaDeÁreaComumToolStripMenuItem.Click += new System.EventHandler(this.reservaDeÁreaComumToolStripMenuItem_Click);
             // 
             // verificarDisponibilidadeToolStripMenuItem
             // 
             this.verificarDisponibilidadeToolStripMenuItem.Name = "verificarDisponibilidadeToolStripMenuItem";
             this.verificarDisponibilidadeToolStripMenuItem.Size = new System.Drawing.Size(254, 26);
             this.verificarDisponibilidadeToolStripMenuItem.Text = "Verificar Disponibilidade ";
+            this.verificarDisponibilidadeToolStripMenuItem.Click += new System.EventHandler(this.verificarDisponibilidadeToolStripMenuItem_Click);
             // 
             // autorizaçõesToolStripMenuItem
             // 
@@ -141,12 +149,14 @@
             this.visitantesAutorizadosToolStripMenuItem.Name = "visitantesAutorizadosToolStripMenuItem";
             this.visitantesAutorizadosToolStripMenuItem.Size = new System.Drawing.Size(318, 26);
             this.visitantesAutorizadosToolStripMenuItem.Text = "Visitantes Autorizados";
+            this.visitantesAutorizadosToolStripMenuItem.Click += new System.EventHandler(this.visitantesAutorizadosToolStripMenuItem_Click);
             // 
             // prestadoresDeServiçoAutorizadosToolStripMenuItem
             // 
             this.prestadoresDeServiçoAutorizadosToolStripMenuItem.Name = "prestadoresDeServiçoAutorizadosToolStripMenuItem";
             this.prestadoresDeServiçoAutorizadosToolStripMenuItem.Size = new System.Drawing.Size(318, 26);
             this.prestadoresDeServiçoAutorizadosToolStripMenuItem.Text = "Prestadores de Serviço Autorizados";
+            this.prestadoresDeServiçoAutorizadosToolStripMenuItem.Click += new System.EventHandler(this.prestadoresDeServiçoAutorizadosToolStripMenuItem_Click);
             // 
             // documentosToolStripMenuItem
             // 
@@ -260,14 +270,24 @@
             this.sairToolStripMenuItem1.Text = "Sair";
             this.sairToolStripMenuItem1.Click += new System.EventHandler(this.sairToolStripMenuItem1_Click);
             // 
+            // cadastroDeVisitasToolStripMenuItem
+            // 
+            this.cadastroDeVisitasToolStripMenuItem.Name = "cadastroDeVisitasToolStripMenuItem";
+            this.cadastroDeVisitasToolStripMenuItem.Size = new System.Drawing.Size(257, 26);
+            this.cadastroDeVisitasToolStripMenuItem.Text = "Cadastro de Visitas";
+            // 
             // frmMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(816, 457);
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(841, 476);
             this.Controls.Add(this.menuStrip1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "frmMenu";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Condomínio Transparente :: Portaria";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
@@ -306,5 +326,6 @@
         private System.Windows.Forms.ToolStripMenuItem relatórioDeÁreasComunsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem sairToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem sairToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem cadastroDeVisitasToolStripMenuItem;
     }
 }

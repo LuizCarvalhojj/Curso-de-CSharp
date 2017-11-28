@@ -84,7 +84,7 @@ namespace ProtótipoPortaria
 
         private void BTN_Sairlogin_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Application.Exit();
         }
 
         private void frmLogin_KeyUp(object sender, KeyEventArgs e)
